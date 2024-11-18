@@ -1,0 +1,277 @@
+/* グローバル設定 */
+body {
+    font-family: "Noto Sans", sans-serif, "游ゴシック";
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #522504;
+    text-align: center;
+    padding: 30px;
+    }
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #78A831;
+    padding: 20px 0 10px 0;
+}
+
+h4 {
+    font-size: 18px;
+    color: #051770;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #522504;
+    line-height: 1.6; /* 行間 */
+}
+
+table{
+    color: #522504;
+    font-weight:600;
+}
+
+
+/* ========================= */
+/* ヘッダー */
+/* ========================= */
+/* ヘッダー全体 */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+}
+
+/* Flexboxの親要素 */
+.header-content {
+    display: flex;
+    justify-content: space-between; /* 左右に配置 */
+    align-items: center; /* 縦方向の中央揃え */
+    height: 80px; /* ヘッダーの高さを指定 */
+}
+
+/* 左側ロゴ */
+.logo {
+    height: 70px; /* 高さを固定 */
+    width: auto;
+}
+
+/* ナビゲーションリストとアイコン */
+.nav-and-icons {
+    display: flex; /* 横並び */
+    align-items: center;
+    gap: 20px; /* リストとアイコンの間に余白 */
+}
+
+/* ナビゲーションリスト */
+header nav ul {
+    display: flex; /* 横並び */
+    gap: 20px; /* リスト項目の間隔 */
+    list-style: none; /* マーカー削除 */
+    margin: 0;
+    padding: 0;
+}
+
+/* リスト項目のリンク */
+header nav ul li a {
+    text-decoration: none;
+    color: #522504;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Instagramアイコン */
+.header-icons {
+    font-size: 24px; /* アイコンのサイズ */
+    color: #522504;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px; /* ヘッダーの高さと同じだけ余白を追加 */
+    
+}
+
+/* ========================= */
+/* .hero: アイキャッチ */
+/* ========================= */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+.hero img {
+    max-width: 100%;
+    border-radius: 40px; /* 境界の外側の角を丸める*/
+}
+
+/* ========================= */
+/* #news: お知らせセクション */
+/* ========================= */
+#news {
+    padding: 30px 20px;
+    /* background-color: #fef7e0; */
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px; /* 最大幅*/
+    text-align: center;
+}
+#news img {
+    vertical-align: middle;  /* 画像をテキストと同じ高さに */
+    margin-right: 10px; /* 右側の余白を指定 */
+    right: auto; 
+    width: 50px; 
+    margin: auto; 
+    
+}
+#news table {
+    width: 100%; /* テーブルを親要素の幅に合わせる */
+    margin-top: 10px; /* 上部に余白を設定 */
+    border-collapse: collapse; /* ボーダーの隙間をなくす */
+}
+#news th, #news td {
+    border-bottom: 1px solid #522504; /* 下部の境界線を設定 */
+    padding: 15px; /* セル内の余白を設定 */
+    text-align: left; /* 左揃えに設定 */
+}
+.more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #F27C33;
+    color: #fff;
+    border: none;
+    border-radius: 4px;  /* 境界の外側の角を丸める*/
+}
+    a:hover{
+        filter: brightness(90%) contrast(120%); /* ホバー時に明るさとコントラストを変える*/
+    }
+
+/* ========================= */
+/* #events: イベント情報 */
+/* ========================= */
+#events {
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 20px;
+    text-align: center; /* ボタンを中央揃え */
+}
+
+.image_container{
+    display: flex; /* 横並びに配置 */
+    align-items: center; /* 中央揃え */
+    justify-content: space-around; /* 子要素（画像）を均等に配置  */
+    text-align: center; /* 全体を中央揃え */
+}
+
+
+.event img {
+    width: 100%; /* コンテナに合わせる */
+    aspect-ratio: 4 / 3; /* 4:3 のアスペクト比 */
+    object-fit: cover; /* 比率を保ちながら切り抜き */
+    border-radius: 50px;
+    padding: 0 10px;
+}
+
+
+.event p{
+    max-width: 300px;
+    word-break: break-word;
+    text-align: left;
+
+}
+
+/* ========================= */
+/* #banner: バナー */
+/* ========================= */
+#banner {
+    text-align: center;
+    padding: 30px;
+}
+
+/* ========================= */
+/* #facoloty: 施設案内 */
+/* ========================= */
+/* セクション全体のスタイル */
+#facility {
+    padding: 30px 20px;
+    background-color: #fff5e1;
+    /* background-color: #fef7e0; */
+}
+
+/* 各施設アイテム */
+.facility-item {
+    display: flex; /* 横並びに配置 */
+    align-items: center; /* 縦方向の中央揃え */
+    gap: 20px; /* 画像とテキストの間に余白 */
+    margin-bottom: 30px; /* 各アイテムの間隔 */
+}
+
+/* 画像のスタイル */
+.facility-item .image img {
+    margin:0 auto;
+    display: block;
+    width: 150px; /* 画像の幅を固定 */
+    height: 150px; /* 高さを固定 */
+
+/* 4つの角を丸める
+    水平方向の半径：左上から時計回りに、29% 63% 36% 50% 
+    垂直方向の半径：左上から時計回りに、47% 35% 36% 40%  */
+    border-radius: 29% 63% 36% 50% / 47% 35% 36% 40% ; 
+    object-fit: cover; /* 画像を切り抜いて比率を保つ */
+}
+
+/* テキストエリアのスタイル */
+.facility-item .right {
+    flex: 1; /* テキストエリアを残りの幅いっぱいに拡大 */
+}
+
+/* 2番目の .facility-item のみ右寄せ */
+.facility-item:nth-child(4) {
+    flex-direction: row-reverse; /* 画像とテキストの順番を逆にする */
+}
+
+/* ========================= */
+/* #facoloty: ギャラリー */
+/* ========================= */
+#gallery {
+    background-color: #fff;  /* ★色かえる */
+    padding: 30px 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* フッター*/
+.footer {
+    background-color: #F27C33;
+}
+/* フッター内のロゴ*/
+.footer-logo{
+    background-color: #fff;
+    border-radius: 6px; /* 境界の外側の角を丸める*/
+    display: inline-block; /* 背景を囲む */
+    text-align: center; /* 中央揃え */
+    margin: 10px;  /* 外側の余白 */
+    padding: 0 8px; /* 上下はナシ、左右のみ余白を入れる */
+    height: auto; /* 高さは自動調整 */
+    width: 200px; /* 横幅を400pxに固定 */
+}
+
