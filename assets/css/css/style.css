@@ -1,6 +1,6 @@
 /* グローバル設定 */
 body {
-    font-family: "Noto Sans", sans-serif, "游ゴシック";
+    font-family: "Noto Sans", "游ゴシック";
 }
 
 h2 {
@@ -20,7 +20,7 @@ h3 {
 
 h4 {
     font-size: 18px;
-    color: #051770;
+    color: #F27C33;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -36,19 +36,23 @@ table{
     font-weight:600;
 }
 
+/* section{
+    margin: 20px 0;
+    padding: 20px;
+} */
 
 /* ========================= */
-/* ヘッダー */
+/* .header: ヘッダー */
 /* ========================= */
 /* ヘッダー全体 */
 .header {
-    width: 100%;
-    position: fixed;
+    width: 100%; /* ヘッダーの幅を画像いっぱいに */
+    position: fixed; /* ヘッダーをページの最上部に固定 */
     top: 0;
     left: 0;
     background-color: #fff;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* ヘッダーをページの最上部に固定 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ヘッダーの下に影 */
     padding: 0 20px;
 }
 
@@ -87,7 +91,7 @@ header nav ul li a {
     text-decoration: none;
     color: #522504;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 /* Instagramアイコン */
@@ -108,7 +112,39 @@ body {
 /* ========================= */
 /* .hero: アイキャッチ */
 /* ========================= */
-.hero {
+/*------ スライダーの横幅 ------*/
+.slider{
+    width:70%;
+    margin:0 auto;
+}
+
+/*------ スライダー画像 ------*/
+  .slider img{  
+    width:100%;
+  }
+
+/*-------- 高さ調整 ----------*/
+  .slider .slick-slide{
+    height:auto!important;
+  }
+  
+/*---------- 矢印 ----------*/
+  .slider .slick-next{
+      right:0!important;
+  }
+  .slider .slick-prev{
+      left:0!important;
+  }
+  .slider .slick-arrow{
+      width: initial!important;
+      height: initial!important;
+      z-index:2!important;
+  }
+  .slider .slick-arrow:before{
+      font-size: 30px!important;
+  }
+  /* ============ */
+ .hero {
     text-align: center;
     padding: 50px 0;
     background-color: #fff;
@@ -122,12 +158,13 @@ body {
 /* #news: お知らせセクション */
 /* ========================= */
 #news {
-    padding: 30px 20px;
+    padding: 20px 20px 20px 10px;
     /* background-color: #fef7e0; */
-    margin: 20px auto;
+    margin: 3% auto;
     width: 80%;
     max-width: 800px; /* 最大幅*/
     text-align: center;
+    border: green 1px solid;
 }
 #news img {
     vertical-align: middle;  /* 画像をテキストと同じ高さに */
@@ -149,12 +186,13 @@ body {
 }
 .more-btn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 50px;
     padding: 8px 16px;
     background-color: #F27C33;
     color: #fff;
     border: none;
-    border-radius: 4px;  /* 境界の外側の角を丸める*/
+    font-weight: bold;
+    border-radius: 6px;  /* 境界の外側の角を丸める*/
 }
     a:hover{
         filter: brightness(90%) contrast(120%); /* ホバー時に明るさとコントラストを変える*/
@@ -164,10 +202,12 @@ body {
 /* #events: イベント情報 */
 /* ========================= */
 #events {
-    background-color: #fff;
-    padding: 30px 20px;
-    margin-top: 20px;
-    text-align: center; /* ボタンを中央揃え */
+    background-color: #fff; /* ★背景色かえる */
+    padding: 20px 20px 20px 10px;
+    text-align: center; /* 全体を中央揃え */
+    margin: 3% 15%;
+    border: green 1px solid;
+    
 }
 
 .image_container{
@@ -177,22 +217,34 @@ body {
     text-align: center; /* 全体を中央揃え */
 }
 
-
 .event img {
-    width: 100%; /* コンテナに合わせる */
-    aspect-ratio: 4 / 3; /* 4:3 のアスペクト比 */
+    width: 100%; /* 画像を親コンテナに合わせる */
+    aspect-ratio: 4 / 3; 4:3 のアスペクト比
     object-fit: cover; /* 比率を保ちながら切り抜き */
     border-radius: 50px;
     padding: 0 10px;
 }
 
+.icon_image {
+    vertical-align: middle;  /* 画像をテキストと同じ高さに */
+    margin-right: 10px; /* 右側の余白を指定 */
+    right: auto; 
+    width: 60px; 
+    margin: auto; 
+}
+
+.event h3 {
+    text-align: center;
+}
 
 .event p{
-    max-width: 300px;
+    max-width: 100%;
     word-break: break-word;
     text-align: left;
-
+    padding: 0 20px 0 20px; /* 左側に余白を追加 */
 }
+
+
 
 /* ========================= */
 /* #banner: バナー */
@@ -200,6 +252,8 @@ body {
 #banner {
     text-align: center;
     padding: 30px;
+    margin: 3% 15%;
+    border: green 1px solid;
 }
 
 /* ========================= */
@@ -208,8 +262,10 @@ body {
 /* セクション全体のスタイル */
 #facility {
     padding: 30px 20px;
-    background-color: #fff5e1;
+    /* background-color: #fff5e1; */
     /* background-color: #fef7e0; */
+    margin: 3% 15%;
+    border: red 1px solid;
 }
 
 /* 各施設アイテム */
@@ -218,6 +274,8 @@ body {
     align-items: center; /* 縦方向の中央揃え */
     gap: 20px; /* 画像とテキストの間に余白 */
     margin-bottom: 30px; /* 各アイテムの間隔 */
+    border: green 1px solid;
+    /* padding: 0 20px; ☆うまくいかない気がする、文字を、寄せたい。 */
 }
 
 /* 画像のスタイル */
@@ -239,19 +297,39 @@ body {
     flex: 1; /* テキストエリアを残りの幅いっぱいに拡大 */
 }
 
+.facility-item > div > p{
+    border: blue 1px solid;
+    width: 80%;
+    height: auto;
+}
+
 /* 2番目の .facility-item のみ右寄せ */
-.facility-item:nth-child(4) {
+.facility-item:nth-child(5) {
     flex-direction: row-reverse; /* 画像とテキストの順番を逆にする */
+}
+
+#facility > h3 {
+    text-align: center;
+}/* ☆うまくいかない何でや！ */
+
+.icon_image {
+    vertical-align: middle;  /* 画像をテキストと同じ高さに */
+    margin-right: 10px; /* 右側の余白を指定 */
+    right: auto; 
+    width: 60px; 
+    margin: auto; 
 }
 
 /* ========================= */
 /* #facoloty: ギャラリー */
 /* ========================= */
 #gallery {
-    background-color: #fff;  /* ★色かえる */
-    padding: 30px 20px;
-    margin-top: 20px;
+    background-color: #fff; /* ★背景色かえる */
+    padding: 20px 20px;
+    margin-top: 10px;
     text-align: center;
+    margin: 3% 15%;
+    border: green 1px solid;
 }
 .gallery-grid {
     display: grid;
@@ -259,13 +337,16 @@ body {
     gap: 10px;
 }
 
+/* ========================= */
+/* .footer: フッター */
+/* ========================= */
 /* フッター*/
 .footer {
     background-color: #F27C33;
 }
 /* フッター内のロゴ*/
 .footer-logo{
-    background-color: #fff;
+    background-color: #fff;  /* ★背景色かえる */
     border-radius: 6px; /* 境界の外側の角を丸める*/
     display: inline-block; /* 背景を囲む */
     text-align: center; /* 中央揃え */
@@ -275,3 +356,21 @@ body {
     width: 200px; /* 横幅を400pxに固定 */
 }
 
+footer nav ul {
+    display: flex; /* 横並び */
+    gap: 20px; /* リスト項目の間隔 */
+    list-style: none; /* マーカー削除 */
+
+    margin: 3% 15%;
+    padding: 25px;
+    
+    border: white 1px solid;
+}
+
+/* リスト項目のリンク */
+footer nav ul li a {
+    text-decoration: none;
+    color: #522504;
+    font-size: 16px;
+    font-weight: 600;
+}
