@@ -3,41 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seed Garden｜公式WEBサイト</title>
+    <title>Seed Garden｜公式Webサイト</title>
+    <meta name="description" content="四季折々の花々と幻想的なライトアップを楽しめるガーデン。ペット同伴もOKで特別な時間をお届けします。">
+<!--------------------Nto sans-------------------------------------------------->    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!--------------------解星 特ミン------------------------------------------------>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset/reset.css">
     <link rel="stylesheet" href="./assets/css/css/style.css">
     <link rel="icon" href="assets/img/log_SQ.PNG" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/script.js"></script>
-    </head><!--------------------スライダー見た目-------------------------------------------------->
+<!--------------------スライダー見た目--------------------------------------------->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-    <!-------------------------------------------------------------------------------------> 
-    <!--------------------スライダー動かすやつ----------------------------------------------->  
+<!--------------------スライダー動かすやつ------------------------------------------->  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <!-------------------------------------------------------------------------------------> 
+<!---------------------------------------------------------------------------------> 
 </head>
 
 <body>
+
 <!-- ヘッダー -->
 <header class="header">
     <div class="header-content">
-        <!-- 左側のロゴ -->
+        <a href="index.html" class="header-logo">
         <img src="assets/img/SG_logos.png" alt="Seed Garden logo" class="logo">
+        </a>
 
         <!-- ナビゲーションリストとInstagramアイコン -->
         <div class="nav-and-icons">
             <nav>
                 <ul>
-                    <li><a href="#facility">施設案内</a></li>
+                    <li><a href="./venue.html">施設案内</a></li>
                     <li><a href="#news">お知らせ</a></li>
                     <li><a href="#events">イベント情報</a></li>
-                    <li><a href="#access">アクセス</a></li>
-                    <li><a href="#faq">よくある質問</a></li>
+                    <li><a href="./access.html">アクセス</a></li>
+                    <li><a href="./FAQ.html">よくあるご質問</a></li>
                 </ul>
             </nav>
             <div class="header-icons">
@@ -47,23 +54,37 @@
     </div>
 </header>
 
+<!-- ページ見出し -->
+<div class="text_wrap">
+<h1>ようこそ、花と光のテーマパークへ</h1>
+</div>
 
 <!-- セクション1：アイキャッチ -->
     <section class="hero">
         <div class="slider">
-        <div><img src="https://placehold.jp/1200x630.png" alt="Hero Image"></div>
-        <div><img src="https://placehold.jp/1200x630.png" alt="Hero Image"></div>
-        <div><img src="https://placehold.jp/1200x630.png" alt="Hero Image"></div>
+        <div><img src="./assets/img/Header_01.png" alt="青空と花畑"></div>
+        <div><img src="./assets/img/Header_02.png" alt="ドッグランオープンのお知らせ"></div>
+        <div><img src="./assets/img/Header_03.png" alt="イルミネーションのお知らせ"></div>
+        <div><img src="./assets/img/Header_04.png" alt="閉園のお知らせ"></div>
     </div>
     </section>
 
+<!-- カウントダウン -->
+<hr class="line-style"></hr>
+    <div id="countdown-container">
+    <p>閉園まで</p>
+    <div id="countdown-days">Loading...</div>
+    <p>日</p>
+    </div>
+<hr class="line-style"></hr>
+
 <!-- セクション2：お知らせ -->
     <section id="news">
-        <img src="assets/img/leaf.png"  alt="News Icon">
+        <img src="assets/img/leaf.png"  alt="リーフアイコン">
         <h2 class>お知らせ</h2>
         <table class="style">
             <tr>
-                <td><time>2024-11-13</time></td>
+                <td><time>2024-11-23</time></td>
                 <td>【重要】 臨時休業のお知らせ</td>
                 </tr>
                 <tr>
@@ -81,24 +102,24 @@
 <!-- セクション3：イベント情報 -->
     <section id="events">
         <div class= "icon_image">
-            <img src="assets/img/flower.png"  alt="Event Icon">
+            <img src="assets/img/flower.png"  alt="フラワーアイコン">
         </div>
         <h2>イベント情報</h2>
         <div class= "image_container">
             <div class="event">
-                <img src="assets/img/event_img01.jpg" alt="Event Image 1">
+                <img src="assets/img/event_img01.jpg" alt="リースなどオーナメントづくり"> <!-- フォトAC -->
                 <h3 class>オーナメントづくり</h3>
-                <p>クリスマスオーナメントを手作りするワークショップです。クリスマスオーナメントを手作りするワークショップです</p>
+                <p>クリスマスに向けてオーナメントを手作りしませんか。参加無料、予約不要。</p>
             </div>
             <div class="event">
-                <img src="assets/img/event_img02.jpg" alt="Event Image 2">
+                <img src="assets/img/event_img02.jpg" alt="ガーデニング用品"> <!-- フォトAC -->
                 <h3 class>ガーデニング用品販売</h3>
-                <p>園芸に必要な用品が揃うイベントです。園芸に必要な用品が揃うイベントです。</p>
+                <p>色鮮やかで見ているのも楽しい海外のガーデニング用品を中心に販売します。</p>
             </div>
             <div class="event">
-                <img src="assets/img/event_img03.jpg" alt="Event Image 3">
-                <h3 class>街角花屋さん登場</h3>
-                <p>パリの朝市を思わせる街角花屋さんが登場！ パリの朝市を思わせる街角花屋さんが登場！</p>
+                <img src="assets/img/event_img03.jpg" alt="屋外の花屋さん"> <!-- フォトAC -->
+                <h3 class>まちかど花屋さん登場</h3>
+                <p>パリの朝市を思わせる、まちかど花屋さん。近年人気のワイルドフラワーも販売！</p>
             </div>
         </div>
         <a href="#"><button class="more-btn">もっと見る ＞</button></a>
@@ -106,77 +127,79 @@
 
     <!-- バナー -->
     <section id="banner">
-        <img src="https://placehold.jp/1200x200.jpg" alt="Event Banner">
+        <img src="./assets/img/banner_campaign.png" alt="イベント開催バナー">
     </section>
 
-    <!-- セクション4：施設案内 -->
-<section id="facility">
-    <div class= "icon_image">
-    <img src="assets/img/leaf.png"  alt="News Icon">
-    </div>
-    <h2>施設案内</h2>
-    <h3>こんなガーデンだよ</h3>
-    <div class="facility-item">
+    <!-- セクション4：施設紹介 -->
+<section id="venue">
+    <h2>施設紹介</h2>
+    <h3>のびのびと自然を楽しめる３つのエリア</h3>
+    <div class="venue-item">  <!-- 各施設アイテム1 -->
         <figure class="image">
-            <img src="assets/img/img_shisetu01.jpg" alt="施設1">
+            <img src="assets/img/img_shisetu01.jpg" alt="バラ園"> <!-- フォトAC -->
         </figure>
-        <div class="right">
-            <h4>花畑だよ</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus harum nesciunt animi! Natus, est recusandae! Iure ullam, eum officia vero tempore quod alias totam expedita quas minus deleniti corporis id.</p>
+        <div class="contents">
+            <h4>四季を楽しむエリア最大級の花畑</h4>
+            <p>色とりどりの花々が季節ごとに咲き誇る、広大な花畑。春のチューリップや秋のコスモスなど、一年を通して彩り豊かな景色を楽しめます。</p>
         </div>
     </div>
-    <div class="facility-item">
+    <div class="venue-item">  <!-- 各施設アイテム2 -->
         <figure class="image">
-            <img src="assets/img/img_shisetu02.jpg" alt="施設2">
+            <img src="assets/img/img_shisetu02.jpg" alt="イルミネーション"> <!-- フォトAC -->
         </figure>
-        <div class="right">
-            <h4>夜もきれいじゃん</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus harum nesciunt animi! Natus, est recusandae! Iure ullam, eum officia vero tempore quod alias totam expedita quas minus deleniti corporis id.</p>
+        <div class="contents">
+            <h4>ライトアップを楽しめる</h4>
+            <p>夜には美しいライトアップでガーデンが幻想的な空間に。花々や木々が光で彩られ、昼とは違うロマンチックな魅力を堪能できます。</p>
         </div>
     </div>
-    <div class="facility-item">
+    <div class="venue-item">  <!-- 各施設アイテム3 -->
         <figure class="image">
-            <img src="assets/img/img_shisetu03.jpg" alt="施設3">
+            <img src="assets/img/img_shisetu03.jpg" alt="ペットと花畑"> <!-- フォトAC -->
         </figure>
-        <div class="right">
-            <h4>走らせるスペース</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus harum nesciunt animi! Natus, est recusandae! Iure ullam, eum officia vero tempore quod alias totam expedita quas minus deleniti corporis id.</p>
+        <div class="contents">
+            <h4>ペットとの入園もＯＫ</h4>
+            <p>リード着用でペットの入場が可能！専用ドッグランやペット用フードを提供するレストランも完備。愛犬と特別なひとときを過ごせます。</p>
         </div>
     </div>
 </section>
 
+<hr class="line-style"></hr>
 
 <!-- セクション5：画像ギャラリー -->
     <section id="gallery">
         <h2 class>ギャラリー</h2>
         <div class="gallery-grid">
             <!-- 正方形の画像を8枚配置 -->
-            <img src="https://placehold.jp/400x400.png" alt="Gallery Image 1">
-            <img src="https://placehold.jp/400x400.png" alt="Gallery Image 2">
-            <img src="https://placehold.jp/400x400.png" alt="Gallery Image 3">
-            <img src="https://placehold.jp/400x400.png" alt="Gallery Image 4">
-            <img src="https://placehold.jp/400x400.png" alt="Gallery Image 5">
-            <img src="https://placehold.jp/400x400.png" alt="Gallery Image 6">
-            <img src="https://placehold.jp/400x400.png" alt="Gallery Image 7">
-            <img src="https://placehold.jp/400x400.png" alt="Gallery Image 8">
+            <img src="./assets/img/SQ01.jpg" alt="4色の花"> <!-- フォトAC -->
+            <img src="./assets/img/SQ02.jpg" alt="ライトアップされた花"> <!-- フォトAC -->
+            <img src="./assets/img/SQ03.jpg" alt="ガーデン"> <!-- フォトAC -->
+            <img src="./assets/img/SQ04.jpg" alt="菜の花畑と犬"> <!-- フォトAC -->
+            <img src="./assets/img/SQ05.jpg" alt="コントラストがきれいなガーデン"> <!-- フォトAC -->
+            <img src="./assets/img/SQ06.jpg" alt="来場者でにぎわうガーデン"> <!-- フォトAC -->
+            <img src="./assets/img/SQ07.jpg" alt="コリー犬と花"> <!-- フォトAC -->
+            <img src="./assets/img/SQ08.jpg" alt="バラ園"> <!-- フォトAC -->
         </div>
     </section>
 
 <!-- フッター -->
-    <footer class="footer">
-        <a href="index.html" class="footer-logo">
+<footer class="footer">
+    <a href="index.html" class="footer-logo">
         <img src="assets/img/SG_logo2.png" alt="Seed Garden Logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#facility"><i class="fa-solid fa-caret-right" style="color: #522504;"></i>施設案内</a></li>
-                <li><a href="#news"><i class="fa-solid fa-caret-right" style="color: #522504;"></i>お知らせ</a></li>
-                <li><a href="#events"><i class="fa-solid fa-caret-right" style="color: #522504;"></i>イベント情報</a></li>
-                <li><a href="#access"><i class="fa-solid fa-caret-right" style="color: #522504;"></i>アクセス</a></li>
-                <li><a href="#faq"><i class="fa-solid fa-caret-right" style="color: #522504;"></i>よくある質問</a></li>
-            </ul>
-        </nav>
-            </footer>
-            </div>
+    </a>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="./venue.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> 施設案内</a></li> <!-- Font Awesome -->
+            <li><a href="#news"><i class="fas fa-caret-right" style="color: #ffffff;"></i> お知らせ</a></li> <!-- Font Awesome -->
+            <li><a href="#events"><i class="fas fa-caret-right" style="color: #ffffff;"></i> イベント情報</a></li> <!-- Font Awesome -->
+            <li><a href="./access.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> アクセス</a></li> <!-- Font Awesome -->
+            <li><a href="./FAQ.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> よくあるご質問</a></li> <!-- Font Awesome -->
+        </ul>
+    </nav>
+    <p class="copyright">©Seed Garden. All rights reserved.</p>
+</footer>
+
+<a href="#" class="back-to-top" id="backToTop">TOPへ戻る</a>
+
+
 </body>
 </html>

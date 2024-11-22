@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seed Garden｜公式Webサイト</title>
+    <meta name="description" content="四季折々の花々と幻想的なライトアップを楽しめるガーデン。ペット同伴もOKで特別な時間をお届けします。">
+<!--------------------Nto sans-------------------------------------------------->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!--------------------解星 特ミン------------------------------------------------>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset/reset.css">
+    <link rel="stylesheet" href="./assets/css/css/style.css">
+    <link rel="icon" href="assets/img/log_SQ.PNG" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/script.js"></script>
+<!--------------------スライダー見た目--------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+<!--------------------スライダー動かすやつ------------------------------------------->  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<!---------------------------------------------------------------------------------> 
+</head>
+
+<body>
+<!-- パンくずリスト -->
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb_list"><a href="./index.html">トップ</a></li>
+        <li class="breadcrumb_list">施設案内</li>
+    </ol>
+</nav>
+<!-- ヘッダー -->
+<header class="header">
+    <div class="header-content">
+        <a href="index.html" class="header-logo">
+        <img src="assets/img/SG_logos.png" alt="Seed Garden logo" class="logo">
+        </a>
+
+        <!-- ナビゲーションリストとInstagramアイコン -->
+        <div class="nav-and-icons">
+            <nav>
+                <ul>
+                    <li><a href="./venue.html">施設案内</a></li>
+                    <li><a href="#news">お知らせ</a></li>
+                    <li><a href="#events">イベント情報</a></li>
+                    <li><a href="./access.html">アクセス</a></li>
+                    <li><a href="./FAQ.html">よくあるご質問</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    </div>
+</header>
+<!--  マツケンチャンス！ -->
+<audio id="myAudio">
+    <source src="./assets/img/samba_II.mp3" type="audio/mpeg">
+</audio>
+<button onclick="playAudio()">MK chance!</button>
+<button onclick="pauseAudio()">Pause</button>
+
+<script>
+const audio = document.getElementById('myAudio');
+
+// ページが読み込まれたら特定の時間から再生
+window.onload = function() {
+    audio.currentTime = 62; // 再生開始時間（秒）
+    audio.muted = true;    // 自動再生のためにミュート
+    audio.play();
+};
+
+// 再生ボタン
+function playAudio() {
+    audio.muted = false; // ミュート解除
+    audio.play();
+}
+
+// 停止ボタン
+function pauseAudio() {
+    audio.pause();
+}
+</script>
+
+    <body>
+    <!-- 施設案内 -->
+    <h1>施設案内</h1>
+    <hr class="line-style"></hr>
+    <section id="area" >
+        <h2>園内マップ</h2>
+        <div class= "area_map">
+        <img src="./assets/img/SeedGarden_MAP.png"  alt="園内マップ">
+    </div></br>
+    </section>
+
+    
+<!-- フッター -->
+<footer class="footer">
+    <a href="index.html" class="footer-logo">
+        <img src="assets/img/SG_logo2.png" alt="Seed Garden Logo">
+    </a>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="./venue.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> 施設案内</a></li> <!-- Font Awesome -->
+            <li><a href="#news"><i class="fas fa-caret-right" style="color: #ffffff;"></i> お知らせ</a></li> <!-- Font Awesome -->
+            <li><a href="#events"><i class="fas fa-caret-right" style="color: #ffffff;"></i> イベント情報</a></li> <!-- Font Awesome -->
+            <li><a href="./access.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> アクセス</a></li> <!-- Font Awesome -->
+            <li><a href="./FAQ.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> よくあるご質問</a></li> <!-- Font Awesome -->
+        </ul>
+    </nav>
+    <p class="copyright">©Seed Garden. All rights reserved.</p>
+</footer>
+
+<a href="#" class="back-to-top" id="backToTop">TOPへ戻る</a>
+
+</body>
+</html>

@@ -1,6 +1,25 @@
+/* ======== カラー情報 ====== */
+
+/* メインカラー　茶色 HEX: #52250482, RGB:82, 37, 4 */
+/* サブカラー オレンジ HEX: #F27C33; RGB: 242, 124, 51 */
+/* アクセントカラー みどり  HEX: #78A831; RGB: 120, 168, 49 */
+/* 背景カラー クリーム HEX: #fffaed; RGB: 255, 250, 237 */
+
+/* ========================= */
+
 /* グローバル設定 */
+
 body {
     font-family: "Noto Sans", "游ゴシック";
+}
+
+h1 {
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 48px;
+    text-align: center;
+    color: #522504;
+
+    margin-top: 30px;
 }
 
 h2 {
@@ -15,7 +34,7 @@ h3 {
     font-size: 24px;
     font-weight: bold;
     color: #78A831;
-    padding: 20px 0 10px 0;
+    padding: 15px 0 10px 0;
 }
 
 h4 {
@@ -26,20 +45,63 @@ h4 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     color: #522504;
+    font-weight: 500;
     line-height: 1.6; /* 行間 */
 }
 
-table{
+table {
     color: #522504;
     font-weight:600;
 }
 
-/* section{
-    margin: 20px 0;
-    padding: 20px;
-} */
+.line-style {
+    position: relative;
+	height: 2px;
+	border-width: 0;
+	background-image: -webkit-linear-gradient(left,
+	transparent 0%, #522504 50%,transparent 100%);
+	background-image:         linear-gradient(90deg,
+	transparent 0% #522504 50%,transparent 100%);
+}
+
+/* もっと見るボタン */
+.more-btn {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 8px 16px;
+    background-color: #F27C33;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;  /* 境界の外側の角を丸める*/
+}
+a:hover{
+        filter: brightness(90%) contrast(120%); /* ホバー時に明るさとコントラストを変える*/
+}
+
+/* パンくず */
+.breadcrumb {
+    display: flex; /* リストを横並びに */
+    flex-wrap: wrap; /* リストが折り返すように */
+    list-style: none; /* リストスタイルを無しに */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+}
+.breadcrumb_list:not(:last-of-type)::after {
+    content: ">"; /* 区切り文字 */
+    margin: 0 .6em; /* 区切り文字の左右の余白 */
+    color: #522504; /* 区切り文字の色 */
+}
+.breadcrumb__list a {
+    text-decoration: none; /* アンダーバーを消す */
+    color: #522504; /* 通常時の文字色 */
+}
+.breadcrumb__list a:hover {
+    text-decoration: none; /* ホバー時もアンダーバーを消す */
+    color:  #522504;/* ホバー時の文字色 */
+}
 
 /* ========================= */
 /* .header: ヘッダー */
@@ -112,42 +174,42 @@ body {
 /* ========================= */
 /* .hero: アイキャッチ */
 /* ========================= */
-/*------ スライダーの横幅 ------*/
+/* ▼ スライダーの横幅 ▼ */
 .slider{
     width:70%;
     margin:0 auto;
 }
 
-/*------ スライダー画像 ------*/
-  .slider img{  
+/* ▼ スライダー画像 ▼ */
+.slider img{  
     width:100%;
-  }
+}
 
-/*-------- 高さ調整 ----------*/
-  .slider .slick-slide{
+/* ▼ スライダーの高さ調整 ▼ */
+.slider .slick-slide{
     height:auto!important;
-  }
-  
-/*---------- 矢印 ----------*/
-  .slider .slick-next{
-      right:0!important;
-  }
-  .slider .slick-prev{
-      left:0!important;
-  }
-  .slider .slick-arrow{
-      width: initial!important;
-      height: initial!important;
-      z-index:2!important;
-  }
-  .slider .slick-arrow:before{
-      font-size: 30px!important;
-  }
-  /* ============ */
- .hero {
+}
+
+/* ▼ スライダーの矢印 ▼ */
+.slider .slick-next{
+    right:0!important;
+}
+.slider .slick-prev{
+    left:0!important;
+}
+.slider .slick-arrow{
+    width: initial!important;
+    height: initial!important;
+    z-index:2!important;
+}
+.slider .slick-arrow:before{
+    font-size: 30px!important;
+}
+
+.hero {
     text-align: center;
     padding: 50px 0;
-    background-color: #fff;
+    /* background-color:#edf8de; */
 }
 .hero img {
     max-width: 100%;
@@ -155,24 +217,55 @@ body {
 }
 
 /* ========================= */
+/* #countdown: カウントダウン */
+/* ========================= */
+
+#countdown-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    color: white; /* 文字色 */
+    padding: 10px;
+    width: 380px; /* 全体の幅 */
+    /* border: pink 1px solid; */
+    justify-content: space-between
+}
+
+#countdown-container p {
+    font-size: 36px;
+    font-weight: 600;
+    /* border: red 1px solid; */
+}
+/* 文字 */
+#countdown-days {
+    font-size: 64px;
+    font-weight: bold;
+    color: #ff9900;
+    border-radius: 5px;
+    display: inline-block;
+    width: 80px; /* 数字エリアの幅 */
+    text-align: center;
+}
+
+/* ========================= */
 /* #news: お知らせセクション */
 /* ========================= */
 #news {
     padding: 20px 20px 20px 10px;
-    /* background-color: #fef7e0; */
+    background-color:  #fffaed;
     margin: 3% auto;
     width: 80%;
     max-width: 800px; /* 最大幅*/
     text-align: center;
-    border: green 1px solid;
+    /* border: green 1px solid; */
+    border-radius: 15px; /* 境界の外側の角を丸める*/
 }
 #news img {
     vertical-align: middle;  /* 画像をテキストと同じ高さに */
     margin-right: 10px; /* 右側の余白を指定 */
     right: auto; 
-    width: 50px; 
-    margin: auto; 
-    
+    width: 50px;     
 }
 #news table {
     width: 100%; /* テーブルを親要素の幅に合わせる */
@@ -180,23 +273,10 @@ body {
     border-collapse: collapse; /* ボーダーの隙間をなくす */
 }
 #news th, #news td {
-    border-bottom: 1px solid #522504; /* 下部の境界線を設定 */
+    border-bottom: 1.5px dotted #918074; /* 下部の境界線を設定 */
     padding: 15px; /* セル内の余白を設定 */
     text-align: left; /* 左揃えに設定 */
 }
-.more-btn {
-    display: inline-block;
-    margin-top: 50px;
-    padding: 8px 16px;
-    background-color: #F27C33;
-    color: #fff;
-    border: none;
-    font-weight: bold;
-    border-radius: 6px;  /* 境界の外側の角を丸める*/
-}
-    a:hover{
-        filter: brightness(90%) contrast(120%); /* ホバー時に明るさとコントラストを変える*/
-    }
 
 /* ========================= */
 /* #events: イベント情報 */
@@ -206,7 +286,7 @@ body {
     padding: 20px 20px 20px 10px;
     text-align: center; /* 全体を中央揃え */
     margin: 3% 15%;
-    border: green 1px solid;
+    /* border: green 1px solid; */
     
 }
 
@@ -219,7 +299,7 @@ body {
 
 .event img {
     width: 100%; /* 画像を親コンテナに合わせる */
-    aspect-ratio: 4 / 3; 4:3 のアスペクト比
+    aspect-ratio: 4 / 3;  /* 4:3 のアスペクト比 */
     object-fit: cover; /* 比率を保ちながら切り抜き */
     border-radius: 50px;
     padding: 0 10px;
@@ -244,8 +324,6 @@ body {
     padding: 0 20px 0 20px; /* 左側に余白を追加 */
 }
 
-
-
 /* ========================= */
 /* #banner: バナー */
 /* ========================= */
@@ -253,33 +331,33 @@ body {
     text-align: center;
     padding: 30px;
     margin: 3% 15%;
-    border: green 1px solid;
+    /* border: green 1px solid; */
 }
 
 /* ========================= */
-/* #facoloty: 施設案内 */
+/* #venue: 施設紹介 */
 /* ========================= */
 /* セクション全体のスタイル */
-#facility {
+#venue {
     padding: 30px 20px;
     /* background-color: #fff5e1; */
     /* background-color: #fef7e0; */
     margin: 3% 15%;
-    border: red 1px solid;
+    /* border: red 1px solid; */
 }
 
 /* 各施設アイテム */
-.facility-item {
+.venue-item {
     display: flex; /* 横並びに配置 */
     align-items: center; /* 縦方向の中央揃え */
     gap: 20px; /* 画像とテキストの間に余白 */
     margin-bottom: 30px; /* 各アイテムの間隔 */
-    border: green 1px solid;
+    /* border: green 1px solid; */
     /* padding: 0 20px; ☆うまくいかない気がする、文字を、寄せたい。 */
 }
 
 /* 画像のスタイル */
-.facility-item .image img {
+.venue-item .image img {
     margin:0 auto;
     display: block;
     width: 150px; /* 画像の幅を固定 */
@@ -293,24 +371,33 @@ body {
 }
 
 /* テキストエリアのスタイル */
-.facility-item .right {
+.venue-item .contents {
     flex: 1; /* テキストエリアを残りの幅いっぱいに拡大 */
 }
 
-.facility-item > div > p{
-    border: blue 1px solid;
+/* テキストエリアのスタイル */
+.venue-item .right {
+    margin: 0 0 0 20%; /* テキストエリアを残りの幅いっぱいに拡大 */
+}
+
+.venue-item > div > p{
+    /* border: blue 1px solid; */
     width: 80%;
     height: auto;
 }
 
-/* 2番目の .facility-item のみ右寄せ */
-.facility-item:nth-child(5) {
+/* 2番目の .venue-item のみ右寄せ */
+.venue-item:nth-child(4) {
     flex-direction: row-reverse; /* 画像とテキストの順番を逆にする */
 }
 
-#facility > h3 {
+/* .venue-item:nth-child(5) p {
+    margin-left: 20%;
+} */
+
+#venue > h3 {
     text-align: center;
-}/* ☆うまくいかない何でや！ */
+}
 
 .icon_image {
     vertical-align: middle;  /* 画像をテキストと同じ高さに */
@@ -321,20 +408,24 @@ body {
 }
 
 /* ========================= */
-/* #facoloty: ギャラリー */
+/* #gallery: ギャラリー */
 /* ========================= */
 #gallery {
-    background-color: #fff; /* ★背景色かえる */
-    padding: 20px 20px;
+    padding: 20px;
     margin-top: 10px;
     text-align: center;
     margin: 3% 15%;
-    border: green 1px solid;
+    /* border: green 1px solid; */
 }
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    display: grid; /* グリッドレイアウト */
+    grid-template-columns: repeat(4, 1fr);  /* 横に4列 「1fr」全体の幅を4等分するということ*/
+    gap: 10px; /* 各アイテムの間隔を10px */
+}
+.gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形を維持 */
+    object-fit: cover; /* 短い方に合わせて拡大し、正方形に収める */
 }
 
 /* ========================= */
@@ -342,11 +433,15 @@ body {
 /* ========================= */
 /* フッター*/
 .footer {
-    background-color: #F27C33;
+    background-color: #522504;
+    display: flex; /* 横並びに配置 */
+    flex-direction: column; /* 縦方向に整列 */
+    align-items: center; /* 横方向の中央揃え */
 }
+
 /* フッター内のロゴ*/
 .footer-logo{
-    background-color: #fff;  /* ★背景色かえる */
+    background-color: #fff;
     border-radius: 6px; /* 境界の外側の角を丸める*/
     display: inline-block; /* 背景を囲む */
     text-align: center; /* 中央揃え */
@@ -356,21 +451,196 @@ body {
     width: 200px; /* 横幅を400pxに固定 */
 }
 
-footer nav ul {
-    display: flex; /* 横並び */
-    gap: 20px; /* リスト項目の間隔 */
-    list-style: none; /* マーカー削除 */
-
-    margin: 3% 15%;
-    padding: 25px;
-    
-    border: white 1px solid;
-}
-
 /* リスト項目のリンク */
-footer nav ul li a {
-    text-decoration: none;
-    color: #522504;
-    font-size: 16px;
-    font-weight: 600;
+.footer-nav ul {
+    display: flex; /* 横並びに配置 */
+    gap: 20px; /* リスト項目の間隔 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    list-style: none; /* リストマーカーを削除 */
 }
+
+/* リンクのスタイル */
+.footer-nav ul li a {
+    text-decoration: none; 
+    color:  #fff;
+    font-weight: 500;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+}
+
+/* ========================= */
+/* フローティングBTN */
+/* ========================= */
+.back-to-top {
+    position: fixed; /* 固定位置 */
+    bottom: 20px; /* 下からの距離 */
+    right: 20px; /* 右からの距離 */
+    display: none; /* 初期状態では非表示 */
+    background-color:  #F27C33; /* ボタンの背景色 */
+    color: #fff; /* テキスト色 */
+    padding: 10px 20px; /* 内側の余白 */
+    border-radius: 50px; /* 丸みをつける */
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ボタンの影 */
+    text-decoration: none; /* 下線を削除 */
+    z-index: 1000; /* 他の要素より上に表示 */
+}
+
+.back-to-top:hover {
+    background-color: #78A831; /* ホバー時の背景色 */
+    text-decoration: underline; /* ホバー時の下線 */
+}
+
+/* ========================= */
+/* #FAQ: よくあるご質問 */
+/* ========================= */
+#FAQ{
+    padding: 0px 20px;
+    margin: 0 10%;
+}
+
+.lead {
+    text-align: center; /* 全体を中央揃え */
+}
+
+#FAQ p {
+    text-align: center; /* 水平方向の中央揃え */
+    margin: 0 auto; /* ブロック要素として中央寄せ */
+    margin-bottom:2%; /* 段落の下に2%の余白を追加 */
+}
+
+/* ▼▼アコーディオンのCSS
+/* アコーディオンメニューの大きさ */
+.accordion {
+    width: 80%; /* 全体の幅を親要素に対する割合で指定 */
+    max-width: 1000px; /* 最大幅を指定 */
+    margin: 0 auto; /* 中央揃え */  
+    color: #522504;
+    font-family: Helvetica
+}
+
+/* アコーディオンメニューの間隔 */
+.accordion-box:not(:first-child) {
+    margin-top: 20px;
+}
+
+/* 質問部分 */
+.question {
+    background: #F27C33;
+    padding: 20px 20px 20px 80px;
+    border-radius: 15px; /* 境界の外側の角を丸める*/
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Qマーク */
+.question::before {
+    content: 'Q';
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 回答部分は最初非表示 */
+.answer {
+  display: none;/* 非表示にしておく */
+    padding: 20px 20px 20px 80px;
+    font-size: 18px;
+    background: #fffaed;
+    position: relative;
+}
+
+/* Aマーク */
+.answer::before {
+    content: 'A';
+    font-size: 20px;
+    font-weight: 700;
+    color:  #522504;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* tel */
+.tel {
+    display: flex; /* 横並びにする */
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向も中央揃え */
+    gap: 8px; /* 電話マークと番号の間に余白を追加 */
+}
+
+.tel a {
+    text-decoration: none; /* 下線を削除 */
+    color: #522504; /* 色を固定 */
+    font-weight: 600;
+    font-size: 32px; /* テキストサイズ */
+}
+
+/* 電話マークのスタイル */
+.tel i {
+    font-size: 32px; /* 電話マークのサイズをテキストと揃える */
+    color:#F27C33; /* マークの色を固定 */
+}
+
+
+/* ========================= */
+/* button: マツケンチャンス
+/* ========================= */
+button {
+    background-color: #522504;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(90%) contrast(120%); /* ホバー時に明るさとコントラストを変える*/
+}
+
+/* ========================= */
+/* .area_map: 園内マップ
+/* ========================= */
+.area_map {
+    text-align:center;
+    width:70%;
+    margin:0 auto;
+}
+
+/* ========================= */
+/* アクセス
+/* ========================= */
+.access {
+    display: flex; /* 横並びに配置 */
+    justify-content: center; /* 横方向に中央揃え */
+    align-items: flex-start; /* 上揃えにする */
+    gap: 20px; /* 画像とテキストの間に余白 */
+    margin: 0 auto; /* 左右中央揃え */
+    max-width: 80%; /* コンテンツの最大幅を設定 */
+}
+
+.access img {
+    max-width: 300px; /* 画像の幅を調整 */
+    height: auto; /* アスペクト比を維持 */
+}
+
+.access ul {
+    font-size: 16px; /* テキストのサイズ */
+    line-height: 1.6; /* 行間を設定 */
+    color: #522504; /* テキストの色 */
+    max-width: 50%; /* テキスト部分の最大幅を指定 */
+}
+

@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Seed Garden｜公式Webサイト</title>
+    <meta name="description" content="四季折々の花々と幻想的なライトアップを楽しめるガーデン。ペット同伴もOKで特別な時間をお届けします。">
+<!--------------------Nto sans-------------------------------------------------->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!--------------------解星 特ミン------------------------------------------------>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset/reset.css">
+    <link rel="stylesheet" href="./assets/css/css/style.css">
+    <link rel="icon" href="assets/img/log_SQ.PNG" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/script.js"></script>
+<!--------------------スライダー見た目--------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+<!--------------------スライダー動かすやつ------------------------------------------->  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<!---------------------------------------------------------------------------------> 
 </head>
 <body>
+
+<!-- パンくずリスト -->
+<nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb_list"><a href="./index.html">トップ</a></li>
+        <li class="breadcrumb_list">よくあるご質問</li>
+    </ol>
+</nav>
+
+<!-- ヘッダー -->
+<header class="header">
+    <div class="header-content">
+        <a href="index.html" class="header-logo">
+        <img src="assets/img/SG_logos.png" alt="Seed Garden logo" class="logo">
+        </a>
+
+        <!-- ナビゲーションリストとInstagramアイコン -->
+        <div class="nav-and-icons">
+            <nav>
+                <ul>
+                    <li><a href="./venue.html">施設案内</a></li>
+                    <li><a href="#news">お知らせ</a></li>
+                    <li><a href="#events">イベント情報</a></li>
+                    <li><a href="./access.html">アクセス</a></li>
+                    <li><a href="./FAQ.html">よくあるご質問</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <body>
+    <!-- FAQ -->
+    <h1>FAQ</h1>
+    <section id="FAQ" >
+        <hr class="line-style"></hr>
+        <div class="lead" >
+            <h2>よくあるご質問</h2>
+                <p>みなさんからよくいただくご質問をまとめました。</p>
+        </div>
+        <div class="accordion">
+            <dl class="accordion-box">
+                <dt class="question"> 開館時間・休園日・入園料について教えてください。</dt><!-- /.question -->
+                <dd class="answer"> 開園時間：9時30分～17時00分（入園は16時まで）</br>
+                                    休園日：毎週月曜日（祝日の場合は開園）ただし祝日の場合は、開園</br>
+                                    入園料：無料</dd><!-- / 答え -->
+            </dl><!-- /.accordion-box -->
+                <dl class="accordion-box">
+                <dt class="question"> 「Seed Garden」への交通アクセスを教えてください。</dt><!-- /.question -->
+                <dd class="answer"> 日本からセブ島までは、飛行機のご利用がおすすめです。</br>
+                                    東京・成田国際空港（NRT）からセブ島までは約5時間です。</dd><!-- / 答え -->
+            </dl><!-- /.accordion-box -->
+                <dl class="accordion-box">
+                <dt class="question"> 館内に食事のできるところはありますか？</dt><!-- /.question -->
+                <dd class="answer"> マムがおいしい食事を準備しております。楽しいひと時をお過ごしください。</dd><!-- / 答え -->            </dl><!-- /.accordion-box -->
+            <dl class="accordion-box">
+                <dt class="question"> ペットも入園できますか。</dt><!-- /.question -->
+                <dd class="answer"> メイン会場や飲食エリアなどリードを付けていただければ入園可能です。</br>
+                                    ワンちゃんがのびのびと走り回れる「ドッグラン」もございますので、ぜひご利用ください。</dd><!-- / 答え -->            </dl><!-- /.accordion-box -->
+        </div>
     
+    </div></br>
+    <p>ご質問・ご相談などございましたら、お気軽にお問い合わせください。</br>
+    お電話でのお問い合わせはこちら</p>
+    <p class="tel">
+        <i class="fas fa-phone-square-alt"></i>
+        <a href="tel:02024-010-0028">2024-010-0028</a>
+    </p>
+</section>
+
+<!-- フッター -->
+<footer class="footer">
+    <a href="index.html" class="footer-logo">
+        <img src="assets/img/SG_logo2.png" alt="Seed Garden Logo">
+    </a>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="./venue.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> 施設案内</a></li> <!-- Font Awesome -->
+            <li><a href="#news"><i class="fas fa-caret-right" style="color: #ffffff;"></i> お知らせ</a></li> <!-- Font Awesome -->
+            <li><a href="#events"><i class="fas fa-caret-right" style="color: #ffffff;"></i> イベント情報</a></li> <!-- Font Awesome -->
+            <li><a href="./access.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> アクセス</a></li> <!-- Font Awesome -->
+            <li><a href="./FAQ.html"><i class="fas fa-caret-right" style="color: #ffffff;"></i> よくあるご質問</a></li> <!-- Font Awesome -->
+        </ul>
+    </nav>
+    <p class="copyright">©Seed Garden. All rights reserved.</p>
+
+</footer>
+<a href="#" class="back-to-top" id="backToTop">TOPへ戻る</a>
+
+<!-- jQueryの読み込み
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </body>
 </html>
